@@ -9,7 +9,8 @@
     font-style: Serif;
 }
 
-.h32{
+.h32 ul li a{
+ padding:0px;
 
 }
 .h33{
@@ -25,8 +26,52 @@
 .ul1{
     color: white;
 }
+
 .iconh31{
     margin-left: 5%;
     color: white;
 }
+
+.imgmain{
+    position: relative;
+    font-family: Arial;
+}
+
+.foto1{ 
+    width: 100%;
+    height: 600px;
+    margin-top: -0.5%;
+}
+.h1foto1{
+position: absolute;
+bottom: 50%;
+right: 30%;
+justify-content: center;
+background: rgba(44, 43, 43, 0.5);
+color: white;
+padding-right: 1%;
+padding-left: 1%;
+
+}
+
+.hapi{
+    display: flex;
+}
+
+.foto2{
+    width: 35%;
+    height: 400px;
+    margin-left: 10%;
+}
+
+.hapi2{
+    flex-direction: column;
+    margin-left: 10%;
+    margin-top: 3%;
+}
+.p1{
+    width: 45%;
+    margin-left: 1%;
+}
+
 
