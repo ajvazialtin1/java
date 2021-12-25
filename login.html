@@ -10,25 +10,80 @@
 </head>
 <body>
 
-        <form>  
-            <div class="katrori">
-                <h1 class="h1">Login</h1>
-                <div class="Username">  
-                <label>Username : </label>   
-                <input type="text" placeholder="Shenoni Username" name="username" required>  
-            </div> 
-            <div class="Password">
-                <label>Password : </label>   
-                <input type="password" placeholder="Shenoni Password" name="password" required> 
-            </div> 
-                <div class="log">
-                <button class="login" type="submit">Login</button> &nbsp <p>Forgot <a class="butoni" href="#"> password? </a></p>      
-                </div> 
-                <div class="opsionregjister">
-                Ende nuk keni llogari? <p> &nbsp <a class="butoni" href="register.html">Regjistrohu Ketu</a> </p>
-                </div>
-            </div>  
-        </form>
+<form>
+    <div class="katrori">
+        <h1 class="h1">Login</h1>
+
+    <div class="Username">  
+             <label>Username : </label> 
+             <input type="text"  name="username" placeholder="Shenoni Username" id="username"> 
+             <label style="color: red;" id="usernameMsg"></label></div>
+
+    <div class="Password">
+             <label>Password : </label>  
+             <input type="password" name="password" placeholder="Shenoni Password" id="password"> 
+             <label style="color: red;" id="passwordMsg"></label></div>
+    
+    <div class="log">
+             <input class="login" type="submit" value="Login" id="loginButton">  &nbsp <p>Forgot <a class="butoni" a href="forgetpassword.html" > password? </a></p> </div>
+
+    <div class="opsionregjister">Ende nuk keni llogari? <p> &nbsp <a class="butoni" href="register.html">Regjistrohu Ketu</a> </p> </div>
+
+    </form>
+
+
+    <script>
+        var button = document.getElementById("loginButton");
+
+        var usernameMsg = document.getElementById("usernameMsg");
+
+        var passwordMsg = document.getElementById("passwordMsg");
+
+        var usernameRegex = /^[A-Z][a-z]/;
+
+        var passwordRegex = /^[A-Za-z]{0,1}\w+[!?]?\w+$/;
+        
+
+        button.addEventListener("click", function(event){
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+           
+
+            if(username == "" || username == null){
+                usernameMsg.innerText="Ploteso Username!";
+                event.preventDefault();
+            }else{
+                if(usernameRegex.test(username)){
+                    usernameMsg.innerText="";
+                }else{
+                    usernameMsg.innerText="Username Gabim!";
+                    event.preventDefault();
+                }
+
+            }
+
+            if(password == "" || password == null){
+                passwordMsg.innerText="Ploteso Password!";
+                event.preventDefault();
+            }else{
+                if(passwordRegex.test(password)){
+                    passwordMsg.innerText="";
+                }else{
+                    passwordMsg.innerText="Password Gabim!";
+                    event.preventDefault();
+                }
+
+            }
+
+            
+
+
+        })
+
+
+    </script>
+        
 
 </body>
 </html>
