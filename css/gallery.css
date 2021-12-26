@@ -159,3 +159,35 @@ main {
     justify-content: center;
     color: black;
 }
+
+.footer{
+	background-color:#a2a4a7;
+    color: white;
+}
+.row{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-style: Serif;
+}
+
+.h32{
+
+}
+.h33{
+    margin-top: 3%;	
+}
+
+.copyright{
+    display: flex;
+    justify-content: space-around;	
+    padding-bottom: 1%;
+}
+
+.ul1{
+    color: white;
+}
+.iconh31{
+    margin-left: 5%;
+    color: white;
+}
