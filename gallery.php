@@ -10,10 +10,11 @@
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php
-    include "./footer.html"
-  ?>
+  include "./header.html"
+?>
   </head>
 <body>
+
 <aside>
     <div class="container1">
         <div class="image-box">
@@ -112,35 +113,8 @@
 </div>
 </div>
 </article>
-<footer>
-
-  <div class="footer">
-    <div class="row">
-      <div class="h31">
-        <h3>Emri i Faqes</h3> <br>
-        <a class="iconh31" href="https://facebook.com"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i></a>
-        <a class="iconh31" href="https://instagram.com"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
-        <a class="iconh31" href="https://whatsapp.com"><i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i></a>
-      </div>
-      <div class="h32">
-        <h3>Links</h3> <br>
-        <ul>
-          <li><a class="ul1" href="#">Home</a></li>
-          <li><a class="ul1" href="#">About Us</a></li>
-          <li><a class="ul1" href="#">Gallery</a></li>
-          <li><a class="ul1" href="#">Contact Us</a></li>
-        </ul>
-      </div>
-      <div class="h33">
-        <h3>Information</h3> <br>
-        <p><i class="fa fa-envelope-o" aria-hidden="true"></i> email@addres.com</p>
-        <p><i class="fa fa-phone" aria-hidden="true"></i> 044 444 444</p> 
-        <p><i class="fa fa-envelope-o" aria-hidden="true"></i> Rr.Ahmet Kaqiku nr.35</p> 
-      </div>
-    </div>
-    <p class="copyright">Copyright © Ajvazi Group</p>
-  </div>
- <br>
- </footer>
+<?php
+  include "./footer.html"
+?>
     </body>
     </html>

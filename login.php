@@ -74,6 +74,7 @@ session_start();
     </script>
 </body>
 </html>
+
 <?php 
 include 'config.php';
 
@@ -93,12 +94,13 @@ if(isset($_POST['loginButton'])){
       if($row['user_type'] == 'admin'){  
 
          $_SESSION['admin_1'] = $row['1'];
-         header('location:admindashboard.php'); 
+         header('location: ./panel/admindashboard.php'); 
+         
 
       }elseif($row['user_type'] == 'user'){  
 
          $_SESSION['user_2'] = $row['2'];
-         header('location:dashboard.php');
+         header('location: ./panel/dashboard.php');
       } 
    }
 }
