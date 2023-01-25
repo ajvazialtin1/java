@@ -1,6 +1,4 @@
-<?php
-    include 'admindashboard.php';
-?>
+<?php include "header.php"?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -15,6 +13,10 @@
   </head>
 <body>
    <div class="container my-5">
+   <div>
+    <div class="text-center mb-4">
+    <h3>Add New Post</h3>
+  </div>
       <form action="postController.php" method="post">
          <div class="form-group">
              <label>Emri</label>
@@ -46,8 +48,9 @@
             placeholder="Shenoni Kostoja" 
             name="price" id="price" autocomplete="off">
             </div>
-
-            <button type="submit" class="btn btn-primary" name="submit" value="Register">Submit</button>
+        <div>
+            <button type="submit" class="btn btn-success" name="submit" value="Register">Post</button>
+            <a href="admindashboard.php" class="btn btn-danger">Cancel</a> 
             </div> 
         </div>  
     </form>

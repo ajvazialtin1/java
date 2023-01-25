@@ -1,6 +1,4 @@
-<?php
-    include 'admindashboard.php';
-?>
+<?php include "header.php"?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -15,6 +13,10 @@
   </head>
 <body>
    <div class="container my-5">
+   <div>
+    <div class="text-center mb-4">
+    <h3>Add New User</h3>
+  </div>
       <form action="userController.php" method="post">
          <div class="form-group">
              <label>Name</label>
@@ -35,11 +37,14 @@
             name="password" autocomplete="off">
             </div>
 
-  <button type="submit" class="btn 
-  btn-primary" name="submit">Submit</button>
+            <div>
+            <button type="submit" class="btn btn-success" name="submit" value="Register">Post</button>
+            <a href="admindashboard.php" class="btn btn-danger">Cancel</a> 
+            </div> 
 </form>
     </div>
 
-
+  <!-- Bootstrap CSS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   </body>
 </html>

@@ -1,35 +1,39 @@
+<?php include "header.php" ?>
+
+<div class="container my-5">
+  <a href="user.php" class="btn btn-dark mb-2">Add New</a>
+  <table class="table table-hover text-center">
+  <thead class="table-dark">
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Password</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+
 <?php
-
-include '../config.php';
-
-session_start();
-
-if(!isset($_SESSION['admin_1'])){
-   header('location: ../login.php');
-}
-
+  // SQL query to select data from database
+$sql = "SELECT * FROM users ORDER BY name";
+$result = $conn->query($sql);
+$conn->close(); 
 ?>
+  <?php while($rows=$result->fetch_assoc())
+   { ?>
+      <tr>
+      <th><?php echo $rows['id'];?></th>
+      <th><?php echo $rows['name'];?></th>
+      <th><?php echo $rows['email'];?></th>
+      <th><?php echo $rows['password'];?></th>
+      <th><a href="" class="link-dark"><i class="fa-solid fa-pen-to-square fs-5 me-3"></i></a>
+      <a href="" class="link-dark"><i class="fa-solid fa-trash fs-5 me-3"></i></a>
+      </td>
+    </tr>
+    <?php } ?>
+  </tbody>
+</table>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="css/admindashboard.css">
-   <title></title>
-</head>
-<body>
-<div class="menu">
-<nav class="navMenu">
-      <a class="a1" href="admindashboard.php">Dashboard</a>
-      <a class="a1" href="logout.php">Log Out</a>
-      <a class="a1" href="user.php">Create User</a>
-      <a class="a1" href="post.php">Create Post</a>
-    </nav>
-
-   <h1 class="h11">Administator</h1>
-</div>
-
-</body>
+  </body>
 </html>
