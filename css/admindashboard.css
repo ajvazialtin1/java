@@ -1,0 +1,25 @@
+body { 
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-family:'Source Sans Pro', sans-serif;
+} 
+	
+.kontenieri{
+    
+    margin: 1%;
+    margin-left: 47%;
+    margin-right: 47%;
+    flex-direction: row;
+    border: 1px solid black;
+    text-align: center;
+}
+.tabela{
+    display: flex;
+}
+
+.tdhanat1{
+    color: orange;
+    
+}

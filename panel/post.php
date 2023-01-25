@@ -1,45 +1,53 @@
 <?php
     include 'admindashboard.php';
 ?>
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/post.css">
-    <title>Document</title>
-</head>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+
+    <title>Test</title>
+  </head>
 <body>
-    <form action="postController.php" method="post">  
-        <div class="katrori">
-            <div>
-                <h1 class="h1">Register i Produktit</h1>
+   <div class="container my-5">
+      <form action="postController.php" method="post">
+         <div class="form-group">
+             <label>Emri</label>
+             <input type="text" class="form-control"
+            placeholder="Shenoni Emri" 
+            name="name" id="name" autocomplete="off">
+            </div> 
+            <div class="form-group">
+             <label>Emri i Doktorrit :</label>
+             <input type="text" class="form-control"
+            placeholder="Shenoni emriDoktorrit" 
+            name="nameDoctor" id="nameDoctor" autocomplete="off">
+            </div> 
+            <div class="form-group">
+             <label>Max Persona</label>
+             <input type="number" class="form-control"
+            placeholder="Shenoni Max Persona" 
+            name="maxPersona" id="maxPersona" autocomplete="off">
             </div>
-        <div class="Emri" >
-            <label>Emri: </label>   
-            <input class="input" type="text" placeholder="Shenoni Emri" name="name" id="name"> 
-        </div>
-        
-        <div class="emriDoktorrit">
-            <label>Emri i Doktorrit : </label>   
-            <input class="input" type="text" placeholder="Shenoni emriDoktorrit" name="nameDoctor" id="nameDoctor"> 
-        </div>
-        <div>
-            <label>Max Persona : </label>   
-            <input class="input" type="number" placeholder="Shenoni Max Persona" name="maxPersona" id="maxPersona"> 
-        </div>
-        <div>
-            <label>Minutat : </label>   
-            <input class="input" type="number" placeholder="Shenoni Max Persona" name="minute" id="minute"> 
-        </div>
-        <div>
-            <label>Kostoja : </label>   
-            <input class="input" type="number" placeholder="Shenoni Koston" name="price" id="price"> 
-        </div>
-            <div class="log">
-            <button class="login" type="number" value="Register">Post</button>
+            <div class="form-group">
+             <label>Minutat</label>
+             <input type="number" class="form-control"
+            placeholder="Shenoni Minutat" 
+            name="minute" id="minute" autocomplete="off">
+            </div>
+            <div class="form-group">
+             <label>Kostoja</label>
+             <input type="number" class="form-control"
+            placeholder="Shenoni Kostoja" 
+            name="price" id="price" autocomplete="off">
+            </div>
+
+            <button type="submit" class="btn btn-primary" name="submit" value="Register">Submit</button>
             </div> 
         </div>  
     </form>

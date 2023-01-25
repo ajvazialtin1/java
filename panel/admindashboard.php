@@ -24,6 +24,7 @@ if(!isset($_SESSION['admin_1'])){
 <nav class="navMenu">
       <a class="a1" href="admindashboard.php">Dashboard</a>
       <a class="a1" href="logout.php">Log Out</a>
+      <a class="a1" href="user.php">Create User</a>
       <a class="a1" href="post.php">Create Post</a>
     </nav>
 

@@ -1,6 +1,6 @@
 <?php
   
-  $conn = mysqli_connect('localhost','root','','test');
+  $conn = mysqli_connect('localhost','root','','web');
   
 // Checking for connections
 if ($conn->connect_error) {
