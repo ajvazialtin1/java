@@ -26,26 +26,44 @@ $conn->close();
   include "./header.html"
 ?>
 </head>
-<body>
-  <br>
-  <?php while($rows=$result->fetch_assoc())
+<style>
+  
+
+
+</style>
+<body >
+            
+<table>
+           
+ <tr>
+ <th>Name</th>
+ <th>Name Doctor</th>
+ <th>Max Persona</th>
+ <th>Minute </th>
+ <th>Price</th>
+ <th>Register</th>
+ </tr>
+   <?php while($rows=$result->fetch_assoc())
    { ?>
-<div class="kontenieri">
-	<table class="tabela">
-			<div class="tdhanat1"><?php echo $rows['name'];?></a></div>
-      <div class="tdhanat1"><?php echo $rows['nameDoctor'];?></div>
-      <div class="tdhanat1"><?php echo $rows['maxPersona'];?></div>
-      <div class="tdhanat1"><?php echo $rows['minute'];?></div>
-      <div class="tdhanat1"><?php echo $rows['price'];?></div>
-      <a href="register.php"><input class="login" type="submit" value="regjistrohu">
-   </table>
-   </div>
-   <?php } ?>
-   <br>
-</body>
+ <tr>
+ <td><?php echo $rows['nameDoctor'];?></td>
+ <td><?php echo $rows['nameDoctor'];?></td>
+ <td><?php echo $rows['maxPersona'];?></td>
+ <td><?php echo $rows['minute'];?></td>
+  <td><?php echo $rows['price'];?></td>
+ <td><a href="register.php" data-toggle="modal"  class="login" type="submit" value="regjistrohu">Register </a> </td>
+ </tr>
+ <?php } ?>
+ </table>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 
 <br>
+   </body>
+
+<br>
+
   <?php
   include "./footer.html"
 ?>
