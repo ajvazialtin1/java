@@ -22,7 +22,7 @@ nav{
   display: flex;
   height: 100px;
   width: 100%;
-  background: #1b1b1b;
+  background-color: #3f69a8;
   align-items: center;
   justify-content: space-between;
   padding: 0 50px 0 100px;
@@ -131,6 +131,8 @@ input[type="checkbox"]{
 }
     </style>
   </head>
+  <body>
+
    <div class="container my-5">
    <div>
     <div class="text-center mb-4">
@@ -168,8 +170,8 @@ input[type="checkbox"]{
             name="price" id="price" autocomplete="off">
             </div>
         <div>
-            <button type="submit" class="btn btn-success" name="submit" value="Register">Post</button>
-            <a href="admindashboard.php" class="btn btn-danger">Cancel</a> 
+            <button type="submit" class="btn btn-success" name="submit" value="Register">Posto</button>
+            <a href="admindashboard.php" class="btn btn-danger">Kthehu</a> 
             </div> 
         </div>  
     </form>

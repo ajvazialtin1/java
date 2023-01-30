@@ -70,7 +70,6 @@ session_start();
                     event.preventDefault();
                 }
             }
-        }
     </script>
 </body>
 </html>

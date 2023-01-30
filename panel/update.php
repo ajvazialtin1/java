@@ -1,4 +1,31 @@
-<?php include "header.php" ?>
+<?php include "header.php";
+$pdo = pdo_connect_mysql();
+$msg = '';
+// Check if the contact id exists, for example update.php?id=1 will get the contact with the id of 1
+if (isset($_GET['id'])) {
+    if (!empty($_POST)) {
+        // This part is similar to the create.php, but instead we update a record and not insert
+        $id = isset($_POST['id']) ? $_POST['id'] : NULL;
+        $name = isset($_POST['name']) ? $_POST['name'] : '';
+        $email = isset($_POST['email']) ? $_POST['email'] : '';
+        $password = isset($_POST['password']) ? $_POST['password'] : '';
+        
+        // Update the record
+        $stmt = $pdo->prepare('UPDATE users SET id = ?, name = ?, email = ?, password = ? WHERE id = ?');
+        $stmt->execute([$id, $name, $email, $password, $_GET['id']]);
+        $msg = 'Updated esht kryer me Sukses';
+    }
+    // Get the contact from the contacts table
+    $stmt = $pdo->prepare('SELECT * FROM users WHERE id = ?');
+    $stmt->execute([$_GET['id']]);
+    $contact = $stmt->fetch(PDO::FETCH_ASSOC);
+    if (!$contact) {
+        exit('Kontakti nuk eksizon me ket ID!');
+    }
+} else {
+    exit('No ID specified!');
+}
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -135,32 +162,35 @@ input[type="checkbox"]{
    <div class="container my-5">
    <div>
     <div class="text-center mb-4">
-    <h3>Add New User</h3>
+    <h3>Update Contact #<?=$contact['id']?></h3>
   </div>
-      <form action="userController.php" method="post">
+  <form action="update.php?id=<?=$contact['id']?>" method="post">
+            <div class="form-group">
+             <label>Id</label>
+             <input type="text" class="form-control" name="id" value="<?=$contact['id']?>" id="id">
+            </div> 
          <div class="form-group">
              <label>Name</label>
-             <input type="text" class="form-control"
-            placeholder="Enter your name" 
-            name="name" autocomplete="off">
+             <input type="text" class="form-control" name="name" value="<?=$contact['name']?>" id="name" >
             </div> 
             <div class="form-group">
              <label>Email</label>
-             <input type="email" class="form-control"
-            placeholder="Enter your email" 
-            name="email" autocomplete="off">
+             <input type="text" class="form-control" name="email" value="<?=$contact['email']?>" id="email">
             </div> 
             <div class="form-group">
              <label>password</label>
-             <input type="text" class="form-control"
-            placeholder="Enter your password" 
-            name="password" autocomplete="off">
+             <input type="text" class="form-control" name="password" value="<?=$contact['password']?>" id="password">
             </div>
 
             <div>
-            <button type="submit" class="btn btn-success" name="submit" value="Register">Vazhdo</button>
+            <button type="submit" class="btn btn-success" name="submit" value="Update">Vazhdo</button>
             <a href="admindashboard.php" class="btn btn-danger">Kthehu</a> 
             </div> 
+            <div>
+    <?php if ($msg): ?>
+    <p><?=$msg?></p>
+    <?php endif; ?>
+</div>
 </form>
     </div>
 

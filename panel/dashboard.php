@@ -1,11 +1,9 @@
 <?php
-
-include '../config.php';
-
+include "dashboardheader.php";
 session_start();
 
 if(!isset($_SESSION['user_2'])){
-   header('location:login_form.php');
+   header('location: ../login.php');
 }
 
 ?>
@@ -21,15 +19,6 @@ if(!isset($_SESSION['user_2'])){
 
 </head>
 <body>
-
-
-   <div>
-      <p>Pershendetje</p>
-      <h1>Ky esht dashboardi i Userit</h1>
-      <a href="logout.php" class="btn">logout</a>
-   </div>
-
-</div>
 
 </body>
 </html>

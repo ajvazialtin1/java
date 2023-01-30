@@ -1,12 +1,18 @@
 <?php
 
-include '../config.php';
-
-session_start();
-
-if(!isset($_SESSION['admin_1'])){
-   header('location: ../login.php');
+function pdo_connect_mysql() {
+    $DATABASE_HOST = 'localhost';
+    $DATABASE_USER = 'root';
+    $DATABASE_PASS = '';
+    $DATABASE_NAME = 'web';
+    try {
+    	return new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', $DATABASE_USER, $DATABASE_PASS);
+    } catch (PDOException $exception) {
+    	// If there is an error with the connection, stop the script and display the error.
+    	exit('Failed to connect to database!');
+    }
 }
+
 
 ?>
 
@@ -34,49 +40,41 @@ if(!isset($_SESSION['admin_1'])){
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 } 
-nav{
-  display: flex;
-  height: 100px;
-  width: 100%;
-  background: #1b1b1b;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 50px 0 100px;
-  flex-wrap: wrap;
+.navtop {
+  	background-color: #3f69a8;
+  	height: 60px;
+  	width: 100%;
+  	border: 0;
 }
-nav .logo{
-  color: #fff;
-  font-size: 35px;
-  font-weight: 600;
+.navtop div {
+  	display: flex;
+  	margin: 0 auto;
+  	width: 1000px;
+  	height: 100%;
 }
-nav ul{
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
+.navtop div h1, .navtop div a {
+  	display: inline-flex;
+  	align-items: center;
 }
-nav ul li{
-  margin: 0 50px;
+.navtop div h1 {
+  	flex: 1;
+  	font-size: 24px;
+  	padding: 0;
+  	margin: 0;
+  	color: #ecf0f6;
+  	font-weight: normal;
 }
-nav ul li a{
-  color: #f2f2f2;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: 500;
-  padding: 8px 15px;
-  border-radius: 5px;
-  letter-spacing: 1px;
-  transition: all 0.3s ease;
+.navtop div a {
+  	padding: 0 20px;
+  	text-decoration: none;
+  	color: #c5d2e5;
+  	font-weight: bold;
 }
-nav ul li a.active,
-nav ul li a:hover{
-  color: #111;
-  background: #fff;
+.navtop div a i {
+  	padding: 2px 8px 0 0;
 }
-nav .menu-btn i{
-  color: #fff;
-  font-size: 22px;
-  cursor: pointer;
-  display: none;
+.navtop div a:hover {
+  	color: #ecf0f6;
 }
 input[type="checkbox"]{
   display: none;
@@ -148,27 +146,17 @@ input[type="checkbox"]{
 
 </style>
   <body>
-    <div>
-    <!-- 
-  <nav class="#navbar navbar-light justify-content-center fs-3 mb-5" 
-  style="background-color: #4766bd73;"> 
-Administrator Sistem
-  </nav>-->
-<nav>
-      <div class="logo">Administrator System</div>
-      <input type="checkbox" id="click">
-      <label for="click" class="menu-btn">
-        <i class="fas fa-bars"></i>
-      </label>
-      <ul>
-        <li><a class="active" href="/java/panel/admindashboard.php">Home</a></li>
-        <li><a href="/java/panel/post.php">Post</a></li>
-        <li><a href="/java/panel/user.php">Users</a></li>
-        <li><a href="..//logout.php">Log Out</a></li>       
-      </ul>
-    </nav>
+  <nav class="navtop">
+<div>
+        <h1>Logo</h1>
+        <a class="active" href="/java/panel/admindashboard.php"></i>Home</a>
+        <a href="/java/panel/post.php"></i>Post</a>
+        <a href="/java/panel/user.php"></i>Users</a>
+        <a href="..//logout.php"></i>Log Out</a>    
 
-    </div>
+   	</div>
+</nav>
+
 
 
   <!-- Bootstrap CSS -->
