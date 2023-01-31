@@ -1,0 +1,24 @@
+.listat{
+	margin-top: 5%;
+	margin-left: 15%;
+	display: row;
+	justify-content: center;
+	width: 70%;
+	border: 1px solid black;
+	padding: 10px;
+
+}
+
+.listat span {
+	margin-left: 50% ;
+}
+
+.di {
+	border-bottom: 1px solid black;
+	: red;
+}
+
+.teri {
+	text-align: center;
+	margin-top: 30px;
+}

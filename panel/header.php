@@ -151,6 +151,8 @@ input[type="checkbox"]{
         <h1>Logo</h1>
         <a class="active" href="/java/panel/admindashboard.php"></i>Home</a>
         <a href="/java/panel/post.php"></i>Post</a>
+        <a href="/java/panel/email.php"></i>Email</a>
+        <a href="/java/panel/listaterminave.php"></i>Terminet</a>
         <a href="/java/panel/user.php"></i>Users</a>
         <a href="..//logout.php"></i>Log Out</a>    
 

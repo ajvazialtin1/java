@@ -1,19 +1,5 @@
 <?php
-
-function pdo_connect_mysql() {
-    $DATABASE_HOST = 'localhost';
-    $DATABASE_USER = 'root';
-    $DATABASE_PASS = '';
-    $DATABASE_NAME = 'web';
-    try {
-    	return new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', $DATABASE_USER, $DATABASE_PASS);
-    } catch (PDOException $exception) {
-    	// If there is an error with the connection, stop the script and display the error.
-    	exit('Failed to connect to database!');
-    }
-}
-
-
+include "../config.php"; 
 ?>
 <!doctype html>
 <html lang="en">
@@ -35,6 +21,7 @@ function pdo_connect_mysql() {
 <div>
         <h1>Logo</h1>
         <a class="active" href="/java/panel/dashboard.php"></i>Home</a>
+        <a class="active" href="/java/panel/terminet.php"></i>Terminet</a>
         <a href="..//logout.php"></i>Log Out</a>    
 
    	</div>
