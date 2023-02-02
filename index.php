@@ -1,3 +1,29 @@
+<?php
+  
+  $conn = mysqli_connect('localhost','root','','web');
+  
+// Checking for connections
+if ($conn->connect_error) {
+    die('Connect Error (' . 
+    $conn->connect_errno . ') '. 
+    $conn->connect_error);
+}
+  
+// SQL query to select data from database
+$sql = "SELECT * FROM indexpanel ORDER BY id";
+$result = $conn->query($sql);
+$conn->close(); 
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/product.css">
+    <title>Home</title>
+    <?php
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,33 +39,21 @@
   include "./header.html"
 ?>
 </head>
-
+<?php while($rows=$result->fetch_assoc())
+   { ?> 
 <body>
 <aside class="bg">
 	<div class="center">
 		<div class="cc">
 <h1>Paragraf</h1>
-<p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p><?php echo $rows['subject1'];?></p>
 <div class="button">
-		<a href="#">
+		<a href="register.php">
         <span></span>
         <span></span>
         <span></span>
         <span></span>
-        Button
-		</a>
-		<div class="btn">
-				<a href="#">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        Button
+        Le Nje Takim Me Mjekun
 		</a>
 </div>
 </div>
@@ -73,8 +87,8 @@ Planning</span><br>
 			<h1>We`ll surround your
 kids with love & care!</h1>
 		</div>
-		<div>
-			<p>It's no stretch to say that a person has a serious advantage in life if he comes from a loving, supportive home. Many people still succeed though they come from less-than-ideal family situations, but having our basic needs met, knowing that our parents love us and learning life lessons at home make all the challenges of day-to-day living that much easier to face.</p>
+		<div> 
+			<p><?php echo $rows['subject2'];?></p>
 		</div>
 		<div><p class="pp">
 			Maybe we are one of the lucky ones who was raised in a happy and secure family with two loving parents. Maybe we weren’t, and growing up was tough withoutthe love and support we longed for. Likely, as an adult you want a happy home for your family.
@@ -98,6 +112,7 @@ kids with love & care!</h1>
 			<a href="">Healing from trauma </a>
 			<a href="">Succeed at school</a>
 		</div>
+		<?php } ?>
 </main>
 </body>
 <?php

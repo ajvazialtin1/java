@@ -143,6 +143,17 @@ input[type="checkbox"]{
   font-size: 40px;
   font-weight: 700;
 }
+.mesazhi {
+  	width: 1000px;
+  	margin: 0 auto;
+}
+.mesazhi h2 {
+  	margin: 0;
+  	padding: 25px 0;
+  	font-size: 22px;
+  	border-bottom: 1px solid #ebebeb;
+  	color: #666666;
+}
 
 </style>
   <body>
@@ -153,7 +164,8 @@ input[type="checkbox"]{
         <a href="/java/panel/post.php"></i>Post</a>
         <a href="/java/panel/email.php"></i>Email</a>
         <a href="/java/panel/listaterminave.php"></i>Terminet</a>
-        <a href="/java/panel/user.php"></i>Users</a>
+        <a href="/java/panel/userlist.php"></i>Users</a>
+        <a href="/java/panel/panel.php"></i>Panel</a>
         <a href="..//logout.php"></i>Log Out</a>    
 
    	</div>

@@ -80,39 +80,6 @@
         </div>
       </div>
 </main>
-
-<article>
-<div class="article">
-    <h1>Regjistroni Femijen </h1>
-    <label class="input">Emri<br></label>
-<input type="text" value="" name="" class="in"><br><br>
-<div>
-<label class="input">Mbiemri</label><br></div>
-<input type="text" value="" name="" class="in"><br><br>
-<label for="datemax" >Enter a date before 2021-01-01:</label><br>
-<input type="date" id="datemax" name="datemax" max="2021-12-31" class="in"><br><br>
-
-<label for="datemin" >Enter a date after 2011-01-01:</label><br>
-<input type="date" id="datemin" name="datemin" min="2011-01-02" class="in"><br><br>
-
-<label for="quantity">Mosha (between 1 and 10):</label><br>
-<input type="number" id="quantity" name="quantity" min="1" max="10" class="in"><br><br>
-
-<div class="gj">
-    <label >Gjinia : </label>
-<label>M<input type="checkbox" id="" name="" class="in1"></label>
-<label>F<input type="checkbox" id="" name="" class="in1"></label><br></div>
-<div class="inp">
-
-    <label for="img">Select image:</label>
-  <input type="file" id="img" name="img" accept="image/*" ><br><br>
-</div>
-
-
-<input type="submit" value="Submit" class="in">
-</div>
-</div>
-</article>
 <?php
   include "./footer.html"
 ?>

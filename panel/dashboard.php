@@ -19,6 +19,10 @@ if(!isset($_SESSION['user_2'])){
 
 </head>
 <body>
+<div class="content">
+	<h2>Home</h2>
+	<p>Mirsevini ne Userdashboard!</p>
+</div>
 
 </body>
 </html>

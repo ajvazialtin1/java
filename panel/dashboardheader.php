@@ -20,9 +20,9 @@ include "../config.php";
   <nav class="navtop">
 <div>
         <h1>Logo</h1>
-        <a class="active" href="/java/panel/dashboard.php"></i>Home</a>
-        <a class="active" href="/java/panel/terminet.php"></i>Terminet</a>
-        <a href="..//logout.php"></i>Log Out</a>    
+        <a class="active" href="dashboard.php"></i>Home</a>
+        <a class="active" href="terminet.php"></i>Terminet</a>
+        <a href="../logout.php"></i>Log Out</a>    
 
    	</div>
 </nav>
@@ -70,5 +70,16 @@ include "../config.php";
 }
 .navtop div a:hover {
   	color: #ecf0f6;
+}
+.content {
+  	width: 1000px;
+  	margin: 0 auto;
+}
+.content h2 {
+  	margin: 0;
+  	padding: 25px 0;
+  	font-size: 22px;
+  	border-bottom: 1px solid #ebebeb;
+  	color: #666666;
 }
 </style>
