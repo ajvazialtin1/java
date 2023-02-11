@@ -1,4 +1,4 @@
-<?php include "header.php";
+<?php include "../header.php";
 $pdo = pdo_connect_mysql();
 $msg = '';
 // Check if the contact id exists, for example update.php?id=1 will get the contact with the id of 1
@@ -179,7 +179,7 @@ input[type="checkbox"]{
 
             <div>
             <button type="submit" class="btn btn-success" name="submit" value="Update">Vazhdo</button>
-            <a href="panel.php" class="btn btn-danger">Kthehu</a> 
+            <a href="indexshow.php" class="btn btn-danger">Kthehu</a> 
             </div> 
             <div>
     <?php if ($msg): ?>

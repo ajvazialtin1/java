@@ -28,9 +28,9 @@ $num_contacts = $pdo->query('SELECT COUNT(*) FROM users')->fetchColumn();
 <body>
 
 <div class="container my-5">
-  <a href="user.php" class="btn btn-dark mb-2">Add New</a>
+  <a href="user.php" class="btn">Add New</a>
   <table class="table table-hover text-center">
-  <thead class="table-dark">
+  <thead class="table1">
     <tr>
       <th scope="col">Id</th>
       <th scope="col">Name</th>
@@ -56,4 +56,16 @@ $num_contacts = $pdo->query('SELECT COUNT(*) FROM users')->fetchColumn();
 </table>
 
   </body>
+  <style>
+.table1{
+  background-color: #3f69a8;
+  color: aliceblue;
+}
+.btn{
+  margin-bottom: 2%;
+  background-color: #3f69a8;
+  color: aliceblue;
+}
+
+  </style>
 </html>

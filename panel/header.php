@@ -165,7 +165,7 @@ input[type="checkbox"]{
         <a href="/java/panel/email.php"></i>Email</a>
         <a href="/java/panel/listaterminave.php"></i>Terminet</a>
         <a href="/java/panel/userlist.php"></i>Users</a>
-        <a href="/java/panel/panel.php"></i>Panel</a>
+        <a href="/java/panel/edit/indexshow.php"></i>Panel</a>
         <a href="..//logout.php"></i>Log Out</a>    
 
    	</div>

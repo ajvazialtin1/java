@@ -1,8 +1,24 @@
+<?php
+  
+  $conn = mysqli_connect('localhost','root','','web');
+  
+// Checking for connections
+if ($conn->connect_error) {
+    die('Connect Error (' . 
+    $conn->connect_errno . ') '. 
+    $conn->connect_error);
+}
+  
+// SQL query to select data from database
+$sql = "SELECT * FROM about ORDER BY id";
+$result = $conn->query($sql);
+$conn->close(); 
+?>
 <!DOCTYPE html>
 <html>
 <head>
 	<title></title>
-	<link rel="stylesheet" type="text/css" href="css/about.css">
+  <link rel="stylesheet" href="about.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 
 	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
@@ -12,25 +28,59 @@
   include "./header.html"
 ?>
 </head>
-
-</body>
-
+<?php while($rows=$result->fetch_assoc())
+   { ?> 
+<body>
 <main>
     <br>
     <div class="about">
         <h1>About Us</h1> <br>
         <div>
-        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt tempore porro recusandae quaerat laboriosam, delectus rerum praesentium optio et laudantium voluptatem maiores eum eligendi deserunt 
-            consectetur excepturi non est odio corrupti. In atque illo ab, minus nesciunt eaque enim laudantium rem incidunt minima quos, accusantium inventore sequi ipsum, distinctio ducimus.
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum, autem? Unde, quibusdam repudiandae accusamus asperiores quia, corporis enim sequi tempore architecto beatae earum cupiditate ipsam excepturi temporibus voluptate dolor iusto.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus cupiditate aut, dolorem pariatur illum necessitatibus eius totam optio nostrum corrupti itaque velit obcaecati consequuntur? Eius minus consequatur nemo voluptatem? Est.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, ad! Harum est id repudiandae, illum magnam, ullam nam, assumenda quas a illo quae sint consequuntur obcaecati voluptatibus pariatur. Ab, aut.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur maxime similique cum at iusto necessitatibus labore accusamus ipsum itaque porro nam, minima, modi, dignissimos error. Quisquam nesciunt sunt enim quod
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, ipsam vel incidunt consectetur laudantium id voluptas adipisci vitae explicabo nesciunt voluptatum atque inventore distinctio fugiat ratione quod a aliquid itaque?
+        <p><?php echo $rows['text1'];?>
         </p>
         </div>
     </div>
 </main>
+<div class="ekipa">
+    <h1>Our Team</h1>
+    <div class="our_team">
+        <div class="team_member">
+          <div class="member_img">
+             <img src="img/mjeku1.jpg" alt="our_team">
+            <div class="social_media">
+             </div>
+          </div>
+          <h3>Test 1</h3>
+          <span>Doktorr i Pergjitshem</span>
+          <p><?php echo $rows['text2'];?></p>
+        </div>
+        <div class="team_member">
+           <div class="member_img">
+             <img src="img/mjeku2.jpg" alt="our_team">
+          </div>
+          <h3>Test 2</h3>
+          <span>Pediater</span>
+          <p><?php echo $rows['text3'];?></p>
+      </div>
+        <div class="team_member">
+           <div class="member_img">
+             <img src="img/mjeku3.jpg" alt="our_team">
+          </div>
+          <h3>Test 3</h3>
+          <span>Stomatolog</span>
+          <p><?php echo $rows['text4'];?></p>
+      </div>
+        <div class="team_member">
+           <div class="member_img">
+             <img src="img/mjeku4.jpg" alt="our_team">
+          </div>
+          <h3>Test 4</h3>
+          <span>Psikolog</span>
+          <p><?php echo $rows['text5'];?></p>
+      </div>  
+    </div>
+</div>	
+<?php } ?>
     <br>
     <?php
   include "./footer.html"

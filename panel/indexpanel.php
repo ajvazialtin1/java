@@ -33,19 +33,13 @@ if(!isset($_SESSION['admin_1'])){
              <label>Emri i faqes</label>
              <input type="text" class="form-control"
             placeholder="Shenoni Emri" 
-            name="name" id="name" autocomplete="off">
+            name="text1" id="name" autocomplete="off">
             </div> 
             <div class="form-group">
              <label>Text 1</label>
              <input type="text" class="form-control"
             placeholder="Shenoni Tekstin" 
-            name="subject1" id="subject1" autocomplete="off">
-            </div> 
-            <div class="form-group">
-             <label>Text 1</label>
-             <input type="text" class="form-control"
-            placeholder="Shenoni Tekstin" 
-            name="subject2" id="subject2" autocomplete="off">
+            name="text2" id="subject1" autocomplete="off">
             </div> 
             <button type="submit" class="btn btn-success" name="submit" value="Register">Posto</button>
             <a href="admindashboard.php" class="btn btn-danger">Kthehu</a> 
