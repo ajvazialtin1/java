@@ -7,10 +7,6 @@
   font-family: 'Exo 2', sans-serif;
 }
 
-body{
-  background: #8c7ae6;
-}
-
 .ekipa{
   margin-top: 60px;
   text-align: center;
@@ -81,4 +77,10 @@ body{
 .about p{
   width: 50%;
   margin-left: 27%;
+}
+
+
+.a23{
+  justify-content: center;
+
 }
